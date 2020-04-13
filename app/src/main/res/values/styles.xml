@@ -1,10 +1,79 @@
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+
+    <style name="Theme.Quni" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/feel_yellow</item>
+        <item name="colorPrimaryDark">@color/feel_yellow_dark</item>
+        <item name="colorSecondary">@color/feel_yellow_secondary</item>
+
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Quni.Headline</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Quni</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Quni</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Quni</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Quni.SmallComponent</item>
+
+        <item name="android:fontFamily">@font/quni_font_family</item>
+        <item name="fontFamily">@font/quni_font_family</item>
     </style>
+
+
+
+    <style name="ShapeAppearance.Quni.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Text Appearance: -->
+
+    <style name="TextAppearance.Quni" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/quni_font_family</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/general_black</item>
+    </style>
+
+    <style name="TextAppearance.Quni.Headline">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.Quni.Subtitle">
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <!-- Widgets: -->
+
+    <style name="Widget.MaterialComponents.Button.Quni" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_marginStart">@dimen/general_side_margin</item>
+        <item name="android:layout_marginEnd">@dimen/general_side_margin</item>
+        <item name="android:padding">0dp</item>
+
+        <item name="android:textColor">@color/general_white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <style name="Widget.MaterialComponents.Button.Quni.Primary">
+        <item name="backgroundTint">@color/primary_button_color_state_list</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.Quni.Circle">
+        <item name="backgroundTint">@color/primary_button_color_state_list</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">28sp</item>
+
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.Quni.Twitter">
+        <item name="backgroundTint">@color/color_twitter</item>
+    </style>
+
+
 
 </resources>

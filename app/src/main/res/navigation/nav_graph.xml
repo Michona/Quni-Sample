@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/landing_screen"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/landing_screen"
+        android:name="com.qusion.quni.ui.view.LandingFragment"
+        android:label="fragment_title_screen"
+        tools:layout="@layout/fragment_landing">
+
+        <action
+            android:id="@+id/action_landing_to_detail"
+            app:destination="@id/joke_detail_screen"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/joke_detail_screen"
+        android:name="com.qusion.quni.ui.view.JokeDetailFragment"
+        android:label="fragment_joke_detail"
+        tools:layout="@layout/fragment_joke_detail">
+    </fragment>
+</navigation>

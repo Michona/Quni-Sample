@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_side_margin">28dp</dimen>
+    <dimen name="button_bot_margin">40dp</dimen>
+    <dimen name="button_height">60dp</dimen>
+
+    <dimen name="get_joke_circle_size">200dp</dimen>
+</resources>

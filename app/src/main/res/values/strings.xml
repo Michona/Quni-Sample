@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Quni Sample</string>
+
+    <string name="no_joke_placeholder">No jokes yet! No, this is serious, not joking. Sincerely, Developers @Qusion.</string>
+    <string name="joke_number_placeholder">Joke #169</string>
+
+    <string name="network_error_text">Error loading! Check connection.</string>
+
+    <string name="button_share_on_twitter">Share on twitter</string>
+    <string name="button_next_joke">Next Joke</string>
+    <string name="button_get_joke">Get a dad joke</string>
 </resources>

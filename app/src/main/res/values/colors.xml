@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="feel_blue">#83E1FF</color>
+    <color name="feel_blue_dark">#79CFEB</color>
+    <color name="feel_blue_secondary">#000000</color>
+
+    <color name="feel_yellow">#D7E7E1</color>
+    <color name="feel_yellow_dark">#C6D5CF</color>
+    <color name="feel_yellow_secondary">#D45668</color>
+
+
+    <color name="color_twitter">#55ACEE</color>
+
+    <color name="general_black">#000000</color>
+    <color name="general_white">#FFF5F5</color>
 </resources>
