@@ -1,7 +1,6 @@
 package com.qusion.quni
 
 import com.qusion.quni.data.db.AppDatabase
-import com.qusion.quni.data.db.daos.JokesDao
 import com.qusion.quni.data.remote.RetrofitProvider
 import com.qusion.quni.data.remote.api.JokesApi
 import com.qusion.quni.domain.repos.JokesRepository
@@ -16,7 +15,7 @@ val diModule = module {
     //Remote
     single<JokesApi> { RetrofitProvider.getClient().create(JokesApi::class.java) }
     //Db
-    single<JokesDao> { AppDatabase.getInstance(androidContext()).jokesDao() }
+    single { AppDatabase.getInstance(androidContext()).jokesDao() }
 
     //Domain
     single { JokesRepository(get(), get()) }

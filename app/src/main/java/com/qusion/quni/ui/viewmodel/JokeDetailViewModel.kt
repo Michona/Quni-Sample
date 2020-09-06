@@ -21,7 +21,7 @@ class JokeDetailViewModel(
     val jokeContent: LiveData<String> = _jokeContent
 
 
-    private val _isJokeLoading = MutableLiveData<Boolean>(false)
+    private val _isJokeLoading = MutableLiveData(false)
     val isJokeLoading: LiveData<Boolean> = _isJokeLoading
 
     private val _nextJokeError = MutableLiveData<Event<Boolean>>()
