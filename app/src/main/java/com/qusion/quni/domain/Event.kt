@@ -5,8 +5,7 @@ package com.qusion.quni.domain
  */
 open class Event<out T>(private val content: T) {
 
-    var consumed = false
-        private set // Allow external read but not write
+    private var consumed= false
 
     /**
      * Returns the content and prevents its use again.

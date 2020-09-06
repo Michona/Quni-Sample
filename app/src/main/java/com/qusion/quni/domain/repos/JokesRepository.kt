@@ -2,15 +2,11 @@ package com.qusion.quni.domain.repos
 
 import com.qusion.quni.data.db.daos.JokesDao
 import com.qusion.quni.data.remote.api.JokesApi
-import com.qusion.quni.domain.NetworkResult
 import com.qusion.quni.domain.entities.JokeDto
 import com.qusion.quni.domain.safeApiCall
 import com.qusion.quni.domain.toNetworkResult
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.filterNotNull
-import kotlinx.coroutines.flow.map
-import timber.log.Timber
 
 class JokesRepository(private val jokesApi: JokesApi, private val jokesCache: JokesDao) {
 
