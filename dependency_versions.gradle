@@ -28,6 +28,6 @@ ext {
 
     //Test
     mockk_version = '1.9.3'
-    junit_version = '4.12'
+    junit_version = '4.13.1'
     androidx_core_test_version = '2.1.0'
 }
