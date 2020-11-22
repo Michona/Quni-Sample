@@ -5,15 +5,23 @@ This is a sample app mainly used for demostrating/showcasing Android architectur
 
 ## Features
 
-The main idea is to get a random dad joke from an open api and give option to the user to share it on twitter or save it to him favorites. 
+The main idea is to get a random dad joke from an open api and give option to the user to share it on twitter or save it to him favorites.
+Back by server: https://icanhazdadjoke.com/ 
 
 ## Architecture 
 
-The app follows the recommendations laid out in the **Guide to App Architecture**. It showcases usage of modern technologies in a simple app. Clean and modern architectural patterns using **Android Architecuture Components**. It keeps the logic away from Activities and Fragments and moves it to **ViewModels**, repositories and UseCases. It observes data using **LiveData**. It has layered structure of Domain, Presentation and Data layer. Heavily uses Kotlin **Coroutines** alongside **Retrofit** for networking solution. It shows proper theming and styling. It relies on **Navigation Component** to simplify into single Activity app. It uses **Room** for clean offline solution and for saving data on device. For dependency injection it takes advantage of the simplicity of **Koin**.
+The app follows the recommendations laid out in the **Guide to App Architecture**. It showcases usage of modern technologies in a simple app. Clean and modern architectural patterns using **Android Architecuture Components**. It keeps the logic away from Activities and Fragments and moves it to **ViewModels**, repositories and UseCases. It observes data using **LiveData**. Heavily uses Kotlin **Coroutines** alongside **Apollo** and **GraphQL** for networking solution. It shows proper theming and styling. It relies on **Navigation Component** to simplify into single Activity app. For dependency injection it takes advantage of the simplicity of **Koin**. It uses **MockK** for Unit testing.
 
-## Upcoming features
+## Tech used
 
-* Write Unit Tests - Using **MockK**
-* Add Favourites functionality - Use **Room** to it's extent. 
+* Android Architecture Components (LiveData, ViewModel ..)
+* Apollo Client (for GraphQL)
+* Koin (dependency injection)
+* Navigation Components
+* Material Design libs
+* MockK (unit tests)
+* Fastlane (builds)
+* Ktlint (for linting)
+* Firebase
 
 ### **Disclaimer: The project is still WIP.**
