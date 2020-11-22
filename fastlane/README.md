@@ -16,11 +16,31 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## Android
-### android test
+### android primary_ci
 ```
-fastlane android test
+fastlane android primary_ci
 ```
-Runs all the tests
+
+### android build_internal
+```
+fastlane android build_internal
+```
+
+### android deploy_internal
+```
+fastlane android deploy_internal
+```
+
+### android build_relase
+```
+fastlane android build_relase
+```
+
+### android deploy_release
+```
+fastlane android deploy_release
+```
+
 
 ----
 
