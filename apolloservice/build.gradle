@@ -4,7 +4,8 @@ plugins {
     id("com.apollographql.apollo").version("$apollo_version")
 }
 
-apply from: '../dependency_versions.gradle'
+apply from: '../scripts/gradle/dependency_versions.gradle'
+apply from: '../scripts/gradle/ktlint.gradle'
 
 android {
     compileSdkVersion target_sdk_version

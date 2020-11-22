@@ -9,7 +9,6 @@ sealed class NetworkResult<out T : Any> {
     data class Error(val cause: Throwable? = null) : NetworkResult<Nothing>()
 }
 
-
 /** Extension functions to make the code more concise  */
 
 inline fun <T : Any> NetworkResult<T>.onSuccess(block: (response: T) -> Unit): NetworkResult<T> {
@@ -25,7 +24,6 @@ inline fun <T : Any> NetworkResult<T>.onError(block: (response: NetworkResult.Er
     }
     return this
 }
-
 
 inline fun <reified T : Any> safeApiCall(block: () -> NetworkResult<T>): NetworkResult<T> {
     return try {

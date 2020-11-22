@@ -1,0 +1,33 @@
+#!/bin/bash
+
+git stash -q --keep-index
+
+# Utils
+green=$(tput setaf 10)
+yellow=$(tput setaf 11)
+red=$(tput setaf 9)
+normal=$(tput sgr0)
+
+# Ktlint
+echo "Running ktlint!"
+
+./gradlew ktlint
+RESULT_LINT=$?
+if [ $RESULT_LINT -ne 0 ]; then
+    echo "${red}Failed:${normal} Lint failed. Please run: ${yellow}./gradlew ktlintFormat"
+    exit 1
+fi
+
+# GraphQL schema
+ echo "Checking remote and local graphql schema!"
+
+ sh ./scripts/check_schema.sh
+RESULT_CHECK_SCHEMA=$?
+ if [ $RESULT_CHECK_SCHEMA -ne 0 ]; then
+    echo "${red}Failed:${normal} Local GraphQL schema outdated. Get latest with: ${yellow}sh ./scripts/load_schema.sh"
+    exit 1
+fi
+
+git stash pop -q
+
+exit 0

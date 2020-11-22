@@ -43,7 +43,7 @@ class JokeDetailFragment : BaseFragment<FragmentJokeDetailBinding>(R.layout.frag
                 }).start()
         }
 
-        //Error
+        // Error
         jokeViewModel.nextJokeError.observe(viewLifecycleOwner) {
             it?.consume()?.let {
                 view.showErrorSnackbar(R.string.network_error_text)

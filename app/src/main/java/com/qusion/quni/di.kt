@@ -7,9 +7,9 @@ import org.koin.dsl.module
 
 val appModule = module {
 
-    //Domain
+    // Domain
     single { JokesRepository(get()) }
 
-    //ViewModels
+    // ViewModels
     viewModel { JokeDetailViewModel(get()) }
 }

@@ -125,7 +125,6 @@ internal class ApolloServiceImpl(
         )
     }
 
-
     private fun buildApolloClient(): ApolloClient {
         val okHttpClientBuilder = OkHttpClient.Builder()
             .readTimeout(20, TimeUnit.SECONDS)
