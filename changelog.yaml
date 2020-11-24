@@ -1,0 +1,11 @@
+# Keep it neat and readable!
+0.0.1:
+  date: 2020-11-24
+  features:
+    - Initial screen to get dad jokes.
+    - Connected to server to get next random joke.
+    - Error catching when there is no internet connection.
+  bug-fixes:
+    - None
+  changes:
+    - None
