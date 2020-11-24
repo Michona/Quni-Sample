@@ -62,7 +62,7 @@ platform :android do
           build_type: "release"
         )
 
-        sh("bash /bitrise/src/scripts/download_keystore.sh")
+        sh("bash /bitrise/src/scripts/download_keystores.sh")
         sh("bash /bitrise/src/scripts/scrape_release_notes.sh")
 
         android_set_version_name(
@@ -85,7 +85,7 @@ platform :android do
         firebase_app_distribution(
             app: ENV['FIREBASE_APP_ID'],
             release_notes_file: ENV['RELEASE_NOTES_PATH'],
-            groups: "client",
+            groups: "clients",
             apk_path: ENV['BITRISE_RELEASE_APK']
         )
 
