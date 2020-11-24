@@ -3,6 +3,7 @@ buildscript {
     ext.kotlin_version = "1.4.10"
     ext.apollo_version = "2.4.1"
     ext.build_gradle_version = "4.1.1"
+    ext.google_services = "4.3.4"
 
     repositories {
         google()
@@ -12,6 +13,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$build_gradle_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.google.gms:google-services:$google_services"
     }
 }
 

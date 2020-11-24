@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "922826577424",
+    "firebase_url": "https://quni-fd585.firebaseio.com",
+    "project_id": "quni-fd585",
+    "storage_bucket": "quni-fd585.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922826577424:android:95fe7dea881b7f418a1c95",
+        "android_client_info": {
+          "package_name": "com.qusion.quni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922826577424-fcivpjf9ot351hrguj0mr5qbqnj7mve5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhPegd5ZoowMeJxzI_J1yGSX87nLHVGXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922826577424-fcivpjf9ot351hrguj0mr5qbqnj7mve5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
