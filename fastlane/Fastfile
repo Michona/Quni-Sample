@@ -62,7 +62,7 @@ platform :android do
           build_type: "release"
         )
 
-        sh("wget "$BITRISEIO_FIREBASE_KEYSTORE_URL" -O "$FIREBASE_KEYSTORE_FILE_PATH" ")
+        sh("wget "$BITRISEIO_FIREBASE_KEYSTORE_URL" -O $FIREBASE_KEYSTORE_FILE_PATH")
         sh("bash /bitrise/src/scripts/scrape_release_notes.sh")
 
         android_set_version_name(
