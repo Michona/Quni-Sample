@@ -24,8 +24,8 @@ android {
     signingConfigs {
         release {
             /* Keystore used to sign for firebase distribution on client group. */
-            keyAlias System.getenv("FIREBASE_KEYSTORE_ALIAS")
-            keyPassword System.getenv("FIREBASE_KEYSTORE_PRIVATE_KEY_PASSWORD")
+            keyAlias System.getenv("FIREBASE_KEY_ALIAS")
+            keyPassword System.getenv("FIREBASE_KEY_PASSWORD")
             storePassword System.getenv("FIREBASE_KEYSTORE_PASSWORD")
             storeFile file(String.valueOf(System.getenv("BITRISEIO_FIREBASE_KEYSTORE_URL")))
         }
