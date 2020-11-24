@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">Quni Sample</string>
-
     <string name="no_joke_placeholder">No jokes yet! No, this is serious, not joking. Sincerely, Developers @Qusion.</string>
     <string name="joke_number_placeholder">Joke #169</string>
 
