@@ -31,39 +31,32 @@ platform :android do
 
 # Deploy Internal - Nightly
     lane :build_internal do
-        gradle(
-          task: "test",
-          build_type: "debug"
-        )
-
-        build_android_app(
-          task: ":app:assemble",
-          build_type: "debug"
-        )
+        primary_ci()
 
         configure_testlab_internal()
     end
 
     lane :deploy_internal do
         ensure_env_vars(
-          env_vars: ['FIREBASE_APP_ID', 'BITRISE_BETA_DEBUG_APK', 'FIREBASE_TOKEN']
+          env_vars: ['FIREBASE_APP_ID', 'BITRISE_DEBUG_APK', 'FIREBASE_TOKEN']
         )
 
         firebase_app_distribution(
             app: ENV['FIREBASE_APP_ID'],
             release_notes: "Happy testing!",
-            groups: "internal-android",
-            apk_path: ENV['BITRISE_BETA_DEBUG_APK']
+            groups: "internal",
+            apk_path: ENV['BITRISE_DEBUG_APK']
         )
     end
 
+    # Add BITRISE_TEST_LAB_APK to the step in Bitrise as app path
     private_lane :configure_testlab_internal do
         sh("bash /bitrise/src/scripts/configure_firebase_testlab.sh")
-        sh("envman add --key BITRISE_TEST_LAB_APK --value $BITRISE_BETA_DEBUG_APK")
+        sh("envman add --key BITRISE_TEST_LAB_APK --value $BITRISE_DEBUG_APK")
     end
 
 # Deploy Release - Manual
-    lane :build_relase do
+    lane :build_release do
         gradle(
           task: "test",
           build_type: "release"
