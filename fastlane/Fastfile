@@ -79,14 +79,14 @@ platform :android do
 
     lane :deploy_release do
         ensure_env_vars(
-            env_vars: ['FIREBASE_APP_ID', 'BITRISE_BETA_RELEASE_APK', 'FIREBASE_TOKEN', 'RELEASE_NOTES_PATH']
+            env_vars: ['FIREBASE_APP_ID', 'BITRISE_RELEASE_APK', 'FIREBASE_TOKEN', 'RELEASE_NOTES_PATH']
         )
 
         firebase_app_distribution(
             app: ENV['FIREBASE_APP_ID'],
             release_notes_file: ENV['RELEASE_NOTES_PATH'],
             groups: "beta-android",
-            apk_path: ENV['BITRISE_BETA_RELEASE_APK']
+            apk_path: ENV['BITRISE_RELEASE_APK']
         )
 
         clean_up()
@@ -94,10 +94,9 @@ platform :android do
 
     private_lane :configure_testlab_release do
         sh("bash /bitrise/src/scripts/configure_firebase_testlab.sh")
-        sh("envman add --key BITRISE_TEST_LAB_APK --value $BITRISE_BETA_RELEASE_APK")
+        sh("envman add --key BITRISE_TEST_LAB_APK --value $BITRISE_RELEASE_APK")
     end
 
-# Util
     private_lane :clean_up do
         sh("rm $VERSION_NAME_PATH")
         sh("rm $RELEASE_NOTES_PATH")
