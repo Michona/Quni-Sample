@@ -1,4 +1,13 @@
 # Keep it neat and readable!
+0.0.2:
+  date: 2020-11-25
+  features:
+    - CI and CD Processes fully added.
+  bug-fixes:
+    - None
+  changes:
+    - None
+
 0.0.1:
   date: 2020-11-24
   features:
