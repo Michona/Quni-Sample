@@ -1,7 +1,9 @@
-warn("Hey I am online!")
+# Check if changelog.yaml was updated when pushing to beta.
+if github.branch_for_base == "beta"
+    failure "I see you haven't updated changelog.yaml. Hmm..." unless git.modified_files.include? "changelog.yaml"
+end
 
-# Make it more obvious that a PR is a work in progress and shouldn't be merged yet
-warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
-
-# Warn when there is a big PR
-warn("Big PR") if git.lines_of_code > 500
+# Check if we are merging from beta to master
+if github.branch_for_base == "master"
+    failure "We, at this great company merge to master only from beta branch." unless github.branch_for_head == "beta"
+end
