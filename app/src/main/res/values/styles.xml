@@ -13,10 +13,9 @@
 
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Quni.SmallComponent</item>
 
-        <item name="android:fontFamily">@font/quni_font_family</item>
-        <item name="fontFamily">@font/quni_font_family</item>
+        <item name="android:fontFamily">@font/quni_font_regular</item>
+        <item name="fontFamily">@font/quni_font_regular</item>
     </style>
-
 
 
     <style name="ShapeAppearance.Quni.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
@@ -27,7 +26,7 @@
     <!-- Text Appearance: -->
 
     <style name="TextAppearance.Quni" parent="TextAppearance.AppCompat">
-        <item name="fontFamily">@font/quni_font_family</item>
+        <item name="fontFamily">@font/quni_font_regular</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/general_black</item>
     </style>
@@ -38,6 +37,12 @@
 
     <style name="TextAppearance.Quni.Subtitle">
         <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.Quni.Button">
+        <item name="fontFamily">@font/quni_font_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/general_white</item>
     </style>
 
 
@@ -73,7 +78,6 @@
     <style name="Widget.MaterialComponents.Button.Quni.Twitter">
         <item name="backgroundTint">@color/color_twitter</item>
     </style>
-
 
 
 </resources>

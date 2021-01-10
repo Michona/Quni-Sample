@@ -10,9 +10,9 @@ ext {
     constraint_layout_version = '2.0.4'
     lifecycle_version = '2.2.0'
     fragment_version = '1.2.5'
-    nav_version = '2.3.1'
+    nav_version = '2.3.2'
 
-    material_version = '1.3.0-alpha03'
+    material_version = '1.3.0-beta01'
 
     //OkHttp
     okhttp_version = '4.8.0'
@@ -21,13 +21,16 @@ ext {
     koin_version = '2.1.6'
 
     //Coroutines
-    coroutines_version = '1.3.9'
+    coroutines_version = '1.4.1'
 
     //Timber
     timber_version = '4.7.1'
 
     //Firebase
     firebase_version = '26.1.0'
+
+    // Google Play
+    google_play_version = '19.0.0'
 
     //Test
     mockk_version = '1.9.3'

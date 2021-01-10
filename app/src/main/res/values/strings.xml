@@ -7,4 +7,7 @@
     <string name="button_share_on_twitter">Share on twitter</string>
     <string name="button_next_joke">Next Joke</string>
     <string name="button_get_joke">Get a dad joke</string>
+
+
+    <string name="chat_room">Chat room</string>
 </resources>
