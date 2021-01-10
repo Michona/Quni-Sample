@@ -42,8 +42,10 @@ class LandingFragment : BaseFragment<FragmentLandingBinding>(R.layout.fragment_l
 
                 /* Just a shortcut - should use viewModelScope! (have this in a VM with some response live data. */
                 lifecycleScope.launch {
-                    when (val response =
-                        googleAuthenticator.signInWithCredentials(account.idToken)) {
+                    when (
+                        val response =
+                            googleAuthenticator.signInWithCredentials(account.idToken)
+                    ) {
                         is NetworkResult.Success -> {
                             Timber.d("${response.value.email}")
                         }
