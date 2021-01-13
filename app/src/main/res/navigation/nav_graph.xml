@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_landing_to_detail"
             app:destination="@id/joke_detail_screen"/>
+        <action
+            android:id="@+id/action_landing_screen_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment" />
     </fragment>
 
     <fragment
@@ -22,4 +25,8 @@
         android:label="fragment_joke_detail"
         tools:layout="@layout/fragment_joke_detail">
     </fragment>
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="com.qusion.quni.chat.ui.ChatRoomFragment"
+        android:label="ChatRoomFragment" />
 </navigation>

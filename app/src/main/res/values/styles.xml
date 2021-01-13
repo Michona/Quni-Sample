@@ -80,4 +80,7 @@
     </style>
 
 
+    <style name="Widget.MaterialComponents.TextInputLayout.Quni.Outlined" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+
+
 </resources>

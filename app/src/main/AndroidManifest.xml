@@ -13,7 +13,9 @@
         android:theme="@style/Theme.Quni">
 
 
-        <activity android:name="com.qusion.quni.ui.view.HostActivity">
+        <activity
+            android:name="com.qusion.quni.ui.view.HostActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -98,6 +98,7 @@ dependencies {
     // Firebase
     implementation platform("com.google.firebase:firebase-bom:$firebase_version")
     implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
 
     implementation "com.google.android.gms:play-services-auth:$google_play_version"
 

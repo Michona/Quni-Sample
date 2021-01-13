@@ -8,6 +8,7 @@ import com.google.android.gms.common.api.ApiException
 import com.quni.apolloservice.api.NetworkResult
 import com.qusion.quni.R
 import com.qusion.quni.base.BaseFragment
+import com.qusion.quni.chat.domain.ChatStoreRepository
 import com.qusion.quni.databinding.FragmentLandingBinding
 import com.qusion.quni.firebase.GoogleAuthenticator
 import kotlinx.coroutines.launch
@@ -17,6 +18,7 @@ import timber.log.Timber
 class LandingFragment : BaseFragment<FragmentLandingBinding>(R.layout.fragment_landing) {
 
     private val googleAuthenticator: GoogleAuthenticator by inject()
+    private val chatStoreRepository: ChatStoreRepository by inject()
 
     override fun onBind() {
 
@@ -48,6 +50,9 @@ class LandingFragment : BaseFragment<FragmentLandingBinding>(R.layout.fragment_l
                     ) {
                         is NetworkResult.Success -> {
                             Timber.d("${response.value.email}")
+
+                            chatStoreRepository.cacheUser(response.value)
+                            findNavController().navigate(R.id.action_landing_screen_to_chatRoomFragment)
                         }
                         is NetworkResult.Error -> {
                             Timber.e(response.cause)
