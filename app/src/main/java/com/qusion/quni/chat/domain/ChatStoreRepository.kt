@@ -39,12 +39,14 @@ class ChatStoreRepository {
                 }
 
                 if (value != null) {
-                    offer(value.documents.map {
-                        ChatMessageDto(
-                            from = it.getString("from") ?: "",
-                            text = it.getString("text") ?: ""
-                        )
-                    })
+                    offer(
+                        value.documents.map {
+                            ChatMessageDto(
+                                from = it.getString("from") ?: "",
+                                text = it.getString("text") ?: ""
+                            )
+                        }
+                    )
                 }
             }
 

@@ -3,11 +3,10 @@ package com.qusion.quni.chat.ui
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.lifecycleScope
-import com.quni.apolloservice.api.NetworkResult
 import com.qusion.quni.R
 import com.qusion.quni.base.BaseFragment
-import com.qusion.quni.databinding.ChatRoomFragmentBinding
 import com.qusion.quni.chat.domain.ChatStoreRepository
+import com.qusion.quni.databinding.ChatRoomFragmentBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import org.koin.android.ext.android.inject
