@@ -43,7 +43,8 @@ class ChatStoreRepository {
                         value.documents.map {
                             ChatMessageDto(
                                 from = it.getString("from") ?: "",
-                                text = it.getString("text") ?: ""
+                                text = it.getString("text") ?: "",
+                                profileUrl = it.getString("profileUrl") ?: ""
                             )
                         }
                     )
@@ -63,7 +64,8 @@ class ChatStoreRepository {
             .set(
                 hashMapOf(
                     "from" to (_user?.displayName ?: ""),
-                    "text" to text
+                    "text" to text,
+                    "profileUrl" to _user?.photoUrl?.toString()
                 )
             )
             .await()

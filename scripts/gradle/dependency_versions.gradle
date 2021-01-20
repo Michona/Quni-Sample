@@ -32,6 +32,9 @@ ext {
     // Google Play
     google_play_version = '19.0.0'
 
+    // Coil
+    coil_version = '1.1.1'
+
     //Test
     mockk_version = '1.9.3'
     junit_version = '4.13.1'

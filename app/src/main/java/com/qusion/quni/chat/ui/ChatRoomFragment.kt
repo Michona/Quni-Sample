@@ -3,6 +3,7 @@ package com.qusion.quni.chat.ui
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.lifecycleScope
+import com.google.firebase.messaging.FirebaseMessaging
 import com.qusion.quni.R
 import com.qusion.quni.base.BaseFragment
 import com.qusion.quni.chat.domain.ChatStoreRepository
@@ -28,6 +29,9 @@ class ChatRoomFragment : BaseFragment<ChatRoomFragmentBinding>(R.layout.chat_roo
     @ExperimentalCoroutinesApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+        FirebaseMessaging.getInstance().subscribeToTopic("chatNotifications")
 
         lifecycleScope.launchWhenStarted {
             chatStoreRepository.getMessagesFlow().collect {
