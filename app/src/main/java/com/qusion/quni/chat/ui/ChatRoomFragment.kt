@@ -30,7 +30,6 @@ class ChatRoomFragment : BaseFragment<ChatRoomFragmentBinding>(R.layout.chat_roo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         FirebaseMessaging.getInstance().subscribeToTopic("chatNotifications")
 
         lifecycleScope.launchWhenStarted {

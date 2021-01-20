@@ -6,7 +6,6 @@ import timber.log.Timber
 
 internal object RemoteMessageTransform {
 
-
     /**
      * @param remote is the [RemoteMessage] we receive from FCM
      *

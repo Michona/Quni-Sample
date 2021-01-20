@@ -9,7 +9,6 @@ sealed class Notification(val channel: Channel) {
         val roomIcon: String? = null
     ) : Notification(Channel.ROOM_CHAT)
 
-
     data class GeneralMessage(
         val title: String,
         val content: String

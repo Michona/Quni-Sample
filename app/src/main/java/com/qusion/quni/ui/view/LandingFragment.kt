@@ -9,8 +9,8 @@ import com.quni.apolloservice.api.NetworkResult
 import com.qusion.quni.R
 import com.qusion.quni.base.BaseFragment
 import com.qusion.quni.chat.domain.ChatStoreRepository
-import com.qusion.quni.databinding.FragmentLandingBinding
 import com.qusion.quni.chat.domain.GoogleAuthenticator
+import com.qusion.quni.databinding.FragmentLandingBinding
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import timber.log.Timber

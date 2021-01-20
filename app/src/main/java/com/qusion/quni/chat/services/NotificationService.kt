@@ -43,7 +43,6 @@ class NotificationService : FirebaseMessagingService() {
                 }
             }
         }
-
     }
 
     override fun onCreate() {
@@ -133,4 +132,3 @@ class NotificationService : FirebaseMessagingService() {
         private const val NOTIFICATION_ID = 169
     }
 }
-

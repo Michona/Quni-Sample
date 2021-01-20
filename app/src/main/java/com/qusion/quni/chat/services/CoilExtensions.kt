@@ -8,7 +8,6 @@ import coil.request.Disposable
 import coil.request.ImageRequest
 import coil.transform.CircleCropTransformation
 
-
 internal fun Context.loadBitmap(url: String, block: (Bitmap) -> Unit): Disposable {
     val req = ImageRequest.Builder(this)
         .data(url)
